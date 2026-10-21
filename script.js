@@ -17,98 +17,98 @@ const barraProgresso = document.querySelector(".barra-progresso-preenchida");
 const perguntas = [
   {
     enunciado:
-      "Se você está muito estressado ou com raiva de alguém, o que você faz?",
+      "O governo criou um lote único de uma pílula que duplica a inteligência e o foco de quem a toma. Como escolher os jovens que vão recebê-la?",
 
     alternativas: [
       {
-        texto: "Desconta a frustração na primeira pessoa que aparece ou quebra algum objeto.",
+        texto: "Dar aos alunos com maiores notas, premiando quem já demonstrou esforço e disciplina nos estudos.",
         afirmacao:
-          " A agressividade não resolve o problema e prejudica suas relações sociais e sua própria saúde."
+          "Você acredita que o potencial máximo deve coroar o mérito e a dedicação prévia do indivíduo."
       },
       {
-        texto: " Tira um momento para respirar, afasta-se da situação e tenta se acalmar.",
+        texto: "  Dar aos alunos com maior dificuldade de aprendizado, usando a pílula para equilibrar a capacidade de todos.",
         afirmacao:
-          " Você prioriza o seu bem-estar e resolve a situação de forma madura, sem machucar os outros."
+          "Você considera que a justiça social deve corrigir as desvantagens da natureza antes de cobrar resultados."
       }
     ]
   },
 
   {
     enunciado:
-      "Quando um amigo compartilha um problema triste com você, qual é sua reação?",
+      "No futuro, cidadãos ganham pontos de "Karma" por boas ações para conseguir morar nos melhores bairros. Um jovem rico passa o dia gravando caridade para a internet e explode no ranking, enquanto um trabalhador braçal não tem tempo nem energia para acumular pontos. O ranking do jovem rico é justo?",
 
     alternativas: [
       {
         texto:
-          "Escuta com atenção e oferece apoio.",
+          " Sim, o ranking é justo. O que importa para a sociedade é o volume final de ajuda entregue, não a facilidade de quem fez.",
         afirmacao:
-          "Praticar a empatia fortalece os laços sociais e contribui para construir uma rede de apoio saudável."
+          "Você acredita que o benefício gerado para o coletivo deve ser premiado de forma fria e objetiva."
       },
       {
         texto:
-          "Você diz que é bobagem ou que a pessoa está dramatizando e muda logo de assunto.",
+          "Não, o ranking é injusto. O algoritmo deveria cobrar uma meta muito maior de quem tem facilidade financeira.",
         afirmacao:
-          "Validar os sentimentos dos outros é uma forma de empatia, fortalece os vínculos sociais e ajuda a pessoa."
+          "Você pensa que o mérito real está no tamanho do sacrifício pessoal, e não na facilidade em gerar aparências."
       }
     ]
   },
 
   {
     enunciado:
-      "Se você percebe que cometeu um erro grave, como você reage?",
+      "A Terra está colapsando e a primeira colônia em Marte ficou pronta, mas as vagas são limitadas. Quem deve ir?",
 
     alternativas: [
       {
         texto:
-          "Você finge que nada aconteceu ou joga a culpa na outra pessoa para não admitir que errou.",
+          "Os bilionários e os maiores cientistas. Quem gerou fortuna ou tecnologia provou que tem capacidade de liderar o novo mundo.",
         afirmacao:
-          "Não assumir os próprios erros impede o desenvolvimento pessoal e gera desconfiança."
+          "Você acredita que a sobrevivência do futuro deve ser financiada e comandada por quem venceu no sistema atual."
       },
       {
         texto:
-          "Reconhece a falha, pede desculpas sinceramente e tenta consertar a situação.",
+          "Cidadãos sorteados de forma totalmente igualitária. Misturando todas as classes sociais da Terra para recomeçar do zero.",
         afirmacao:
-          "Ter responsabilidade afetiva mostra maturidade emocional e respeito pelo próximo."
+          "Você pensa que o colapso da Terra provou que o sistema antigo faliu; a dignidade humana deve ser o único passaporte."
       }
     ]
   },
 
   {
     enunciado:
-      "Diante de uma opinião totalmente diferente da sua em uma discussão, o que você faz?",
+      "Em um jogo de realidade virtual que gera dinheiro real, um jogador genial passa 10 anos construindo um império e falece. Ele deixa o império (nível 100) para o filho, que nunca jogou. O que o jogo deve fazer?",
 
     alternativas: [
       {
         texto:
-          "Você começa a gritar, ofende a pessoa e tenta impor o seu ponto de vista a qualquer custo.",
+          "Entregar o império ao filho. O direito de passar o fruto do seu trabalho para quem você ama é o maior motor da ambição humana.",
         afirmacao:
-          "O respeito à diversidade de ideias é fundamental para a vida em sociedade. A agressividade anula o diálogo."
+          "Você considera que o direito à herança e à propriedade privada deve ser protegido acima de tudo."
       },
       {
         texto:
-          "Ouve o argumento do outro com respeito, expressa sua opinião calmamente e aceita que as pessoas pensam diferente.",
+          "Deletar o império e redistribuir as moedas no servidor. Ninguém deve começar o jogo no topo apenas por ser filho do dono.",
         afirmacao:
-          "O diálogo pacífico e a tolerância são essenciais para um convívio social saudável."
+          "Você considera que o ambiente virtual deve ser 100% meritocrático, livre dos privilégios do mundo físico."
       }
     ]
   },
 
   {
     enunciado:
-      "Quando você sente que está sobrecarregado e não está bem mentalmente, qual atitude você toma?",
+      "Uma inteligência artificial de RH elimina candidatos que usam gírias ou sotaques periféricos em entrevistas de voz, contratando apenas quem fala o "português erudito" das classes altas. A IA deve ser mantida?",
 
     alternativas: [
       {
         texto:
-          "Você aceita seus limites, conversa com alguém de confiança ou procura a ajuda de um profissional.",
+          "Sim, deve ser mantida. Falar de forma polida é uma competência técnica que depende do esforço e dedicação de cada um.",
         afirmacao:
-          "Reconhecer que precisa de ajuda é um sinal de força e autocuidado com a sua mente."
+          "Você considera que o mercado exige padrões de excelência e premia quem se adequou a eles."
       },
       {
         texto:
-          "Guarda tudo para si, finge que está bem e continua acumulando emoções até explodir.",
+          "Não, deve ser proibida. A forma como alguém fala depende de onde cresceu, e não de seu talento profissional.",
         afirmacao:
-          " Ignorar a própria saúde mental pode levar ao esgotamento extremo e a problemas mais graves."
+          " Você confia que cobrar erudição mascara o privilégio social como se fosse competência, sabotando o mérito real"
       }
     ]
   }
