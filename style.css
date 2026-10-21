@@ -1,10 +1,10 @@
  :root {
-  --fundo: #883b6a;
-  --painel: #94568c;
-  --painel-claro: #7c054b;
-  --borda: #ff7ef4;
-  --azul: #f78ce5;
-  --azul-claro: #f88dc8;
+  --fundo: #71e98f;
+  --painel: #298f4b;
+  --painel-claro: #3ae98346;
+  --borda: #08572f;
+  --azul: #12a54f;
+  --azul-claro: #558d6c;
   --texto: #f0f7ff;
   --texto-suave: #a9b8cc;
 }
@@ -39,7 +39,7 @@ body {
   padding: 44px 60px 26px;
   display: flex;
   flex-direction: column;
-  background: rgba(145, 2, 68, 0.97);
+  background: rgba(10, 112, 53, 0.97);
   border: 1px solid var(--borda);
   border-radius: 22px;
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
@@ -96,7 +96,7 @@ h1 {
   width: 100%;
   height: 7px;
   overflow: hidden;
-  background: rgba(145, 2, 68, 0.97);
+  background: rgba(145, 2, 69, 0.911);
   border-radius: 20px;
 }
 
