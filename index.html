@@ -1,4 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Saúde mental e inteligência emocional</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="caixa-principal">
+    <header class="cabecalho">
+      <p class="subtitulo">CONHEÇA SUAS EMOÇÕES, CUIDE DE SI</p>
+      <h1>Você decide o futuro da IA</h1>
+      <p class="introducao">
+        Entenda suas emoções, reflita sobre suas atitudes e descubra como cuidar melhor de si e dos outros.
+      </p>
+    </header>
+
+    <div class="progresso">
+      <div class="progresso-info">
+        <span id="numero-pergunta">Pergunta 1 de 5</span>
+        <span id="porcentagem">20%</span>
+      </div>
+      <div class="barra-progresso">
+        <div class="barra-progresso-preenchida"></div>
+      </div>
+    </div>
+
+    <section class="conteudo-jogo">
+      <p class="etiqueta">SUA ESCOLHA</p>
+
+      <h2 class="caixa-perguntas"></h2>
+
+      <div class="caixa-alternativas"></div>
+
+      <div class="caixa-feedback" hidden aria-live="polite">
+        <p class="feedback-etiqueta">REFLITA SOBRE SUA ESCOLHA</p>
+        <p class="texto-feedback"></p>
+        <button class="botao-proxima">Próxima pergunta →</button>
+      </div>
+    </section>
+
+    <section class="caixa-resultado" hidden aria-live="polite">
+      <p class="subtitulo">SUA JORNADA TERMINOU</p>
+      <h2>O futuro começa com você.</h2>
+      <p class="texto-resultado"></p>
+
+      <div class="resumo-escolhas"></div>
+
+      <button class="botao-reiniciar">Jogar novamente ↻</button>
+    </section>
+
+    <footer>
+      <span>CUIDAR DA MENTE É CUIDAR DA VIDA.</span>
+      <span>•</span>
+      <span>PEQUENAS ATITUDES FAZEM GRANDES DIFERENÇAS.</span>
+    </footer>
+  </main>
+</body>
+</html>
 
 
 
