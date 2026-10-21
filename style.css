@@ -96,7 +96,7 @@ h1 {
   width: 100%;
   height: 7px;
   overflow: hidden;
-  background: rgba(145, 2, 69, 0.911);
+  background: rgba(145, 2, 2, 0.911);
   border-radius: 20px;
 }
 
@@ -153,7 +153,7 @@ h1 {
 }
 
 .caixa-alternativas button:hover {
-  background: #8b0062;
+  background: #8b0000;
   border-color: var(--azul);
   transform: translateY(-2px);
 }
@@ -180,9 +180,9 @@ button:focus-visible {
 .caixa-feedback {
   margin-top: 25px;
   padding: 27px;
-  background: #8b0062;
+  background: #008b2e;
   background:;
-  border: 1px solid #c078aa;
+  border: 1px solid #6ab476;
   border-left: 5px solid var(--rosa);
   border-radius: 14px;
 }
