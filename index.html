@@ -1,8 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Um jogo interativo para refletir sobre meritocracia, sociedade e inteligência artificial.">
 
   <title>Meritocracia e sociedade</title>
 
@@ -13,9 +16,12 @@
   <main class="caixa-principal">
     <header class="cabecalho">
       <p class="subtitulo">COMO SUAS ATITUDES IMPACTAM A SOCIEDADE</p>
+
       <h1>Você decide o futuro da IA</h1>
+
       <p class="introducao">
-        Entenda sobre meritocracia, reflita sobre suas atitudes e descubra como a sociedade pode melhorar
+        Entenda a meritocracia, reflita sobre suas atitudes e descubra como a sociedade pode melhorar.
+      </p>
     </header>
 
     <div class="progresso">
@@ -23,39 +29,53 @@
         <span id="numero-pergunta">Pergunta 1 de 5</span>
         <span id="porcentagem">20%</span>
       </div>
-      <div class="barra-progresso">
+
+      <div
+        class="barra-progresso"
+        role="progressbar"
+        aria-label="Progresso do jogo"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="20"
+      >
         <div class="barra-progresso-preenchida"></div>
       </div>
     </div>
 
-    <section class="conteudo-jogo">
+    <section class="conteudo-jogo" aria-label="Perguntas do jogo">
       <p class="etiqueta">SUA ESCOLHA</p>
 
-      <h2 class="caixa-perguntas"></h2>
+      <h2 class="caixa-perguntas" tabindex="-1"></h2>
 
       <div class="caixa-alternativas"></div>
 
       <div class="caixa-feedback" hidden aria-live="polite">
         <p class="feedback-etiqueta">REFLITA SOBRE SUA ESCOLHA</p>
         <p class="texto-feedback"></p>
-        <button class="botao-proxima">Próxima pergunta →</button>
+        <button type="button" class="botao-proxima">
+          Próxima pergunta →
+        </button>
       </div>
     </section>
 
     <section class="caixa-resultado" hidden aria-live="polite">
       <p class="subtitulo">SUA JORNADA TERMINOU</p>
+
       <h2>O futuro começa com você.</h2>
+
       <p class="texto-resultado"></p>
 
       <div class="resumo-escolhas"></div>
 
-      <button class="botao-reiniciar">Jogar novamente ↻</button>
+      <button type="button" class="botao-reiniciar">
+        Jogar novamente ↻
+      </button>
     </section>
 
     <footer>
-      <span>Enquanto não houver oportunidades iguais não se poderá falar em meritocracia</span>
-      <span>•</span>
-      <span>Não se deve julgar o mérito de um homem pelas suas grandes qualidades, mas pelo uso que sabe fazer delas.</span>
+      <span>Enquanto não houver oportunidades iguais, não se poderá falar em meritocracia.</span>
+      <span aria-hidden="true">•</span>
+      <span>Não se deve julgar o mérito de uma pessoa apenas por suas qualidades, mas pelo uso que faz delas.</span>
     </footer>
   </main>
 </body>

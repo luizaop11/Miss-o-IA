@@ -13,6 +13,7 @@ const progresso = document.querySelector(".progresso");
 const numeroPergunta = document.querySelector("#numero-pergunta");
 const porcentagem = document.querySelector("#porcentagem");
 const barraProgresso = document.querySelector(".barra-progresso-preenchida");
+const barraProgressoContainer = document.querySelector(".barra-progresso");
 
 const perguntas = [
   {
@@ -21,34 +22,36 @@ const perguntas = [
 
     alternativas: [
       {
-        texto: "Dar aos alunos com maiores notas, premiando quem já demonstrou esforço e disciplina nos estudos.",
+        texto:
+          "Dar aos alunos com maiores notas, premiando quem já demonstrou esforço e disciplina nos estudos.",
         afirmacao:
           "Você acredita que o potencial máximo deve coroar o mérito e a dedicação prévia do indivíduo."
       },
       {
-        texto: "  Dar aos alunos com maior dificuldade de aprendizado, usando a pílula para equilibrar a capacidade de todos.",
+        texto:
+          "Dar aos alunos com maior dificuldade de aprendizado, usando a pílula para equilibrar a capacidade de todos.",
         afirmacao:
-          "Você considera que a justiça social deve corrigir as desvantagens da natureza antes de cobrar resultados."
+          "Você considera que a justiça social deve corrigir as desvantagens antes de cobrar resultados."
       }
     ]
   },
 
   {
     enunciado:
-      "No futuro, cidadãos ganham pontos de "Karma" por boas ações para conseguir morar nos melhores bairros. Um jovem rico passa o dia gravando caridade para a internet e explode no ranking, enquanto um trabalhador braçal não tem tempo nem energia para acumular pontos. O ranking do jovem rico é justo?",
+      'No futuro, cidadãos ganham pontos de "Karma" por boas ações para conseguir morar nos melhores bairros. Um jovem rico passa o dia gravando caridade para a internet e sobe no ranking, enquanto um trabalhador braçal não tem tempo nem energia para acumular pontos. O ranking do jovem rico é justo?',
 
     alternativas: [
       {
         texto:
-          " Sim, o ranking é justo. O que importa para a sociedade é o volume final de ajuda entregue, não a facilidade de quem fez.",
+          "Sim. O que importa para a sociedade é o volume final de ajuda oferecida, não a facilidade de quem a oferece.",
         afirmacao:
-          "Você acredita que o benefício gerado para o coletivo deve ser premiado de forma fria e objetiva."
+          "Você acredita que o benefício gerado para o coletivo deve ser premiado de forma objetiva."
       },
       {
         texto:
-          "Não, o ranking é injusto. O algoritmo deveria cobrar uma meta muito maior de quem tem facilidade financeira.",
+          "Não. O algoritmo deveria considerar as condições financeiras e as oportunidades de cada pessoa.",
         afirmacao:
-          "Você pensa que o mérito real está no tamanho do sacrifício pessoal, e não na facilidade em gerar aparências."
+          "Você considera que o mérito precisa levar em conta as desigualdades e não apenas os resultados."
       }
     ]
   },
@@ -60,55 +63,61 @@ const perguntas = [
     alternativas: [
       {
         texto:
-          "Os bilionários e os maiores cientistas. Quem gerou fortuna ou tecnologia provou que tem capacidade de liderar o novo mundo.",
+          "Os bilionários e os maiores cientistas. Quem financiou tecnologias ou demonstrou conhecimento pode contribuir para a sobrevivência da colônia.",
+
         afirmacao:
-          "Você acredita que a sobrevivência do futuro deve ser financiada e comandada por quem venceu no sistema atual."
+          "Você considera que recursos financeiros e conhecimentos especializados devem ter peso na escolha de quem irá para Marte."
       },
       {
         texto:
-          "Cidadãos sorteados de forma totalmente igualitária. Misturando todas as classes sociais da Terra para recomeçar do zero.",
+          "Cidadãos sorteados de forma igualitária, reunindo pessoas de diferentes classes sociais para recomeçar.",
+
         afirmacao:
-          "Você pensa que o colapso da Terra provou que o sistema antigo faliu; a dignidade humana deve ser o único passaporte."
+          "Você acredita que a dignidade humana e a diversidade social devem ser consideradas, independentemente da riqueza."
       }
     ]
   },
 
   {
     enunciado:
-      "Em um jogo de realidade virtual que gera dinheiro real, um jogador genial passa 10 anos construindo um império e falece. Ele deixa o império (nível 100) para o filho, que nunca jogou. O que o jogo deve fazer?",
+      "Em um jogo de realidade virtual que gera dinheiro real, um jogador genial passa 10 anos construindo um império e falece. Ele deixa o império, nível 100, para o filho, que nunca jogou. O que o jogo deve fazer?",
 
     alternativas: [
       {
         texto:
-          "Entregar o império ao filho. O direito de passar o fruto do seu trabalho para quem você ama é o maior motor da ambição humana.",
+          "Entregar o império ao filho. O direito de transmitir o fruto do próprio trabalho para quem se ama pode incentivar a dedicação.",
+
         afirmacao:
-          "Você considera que o direito à herança e à propriedade privada deve ser protegido acima de tudo."
+          "Você considera que o direito à herança e à propriedade privada deve ser protegido."
       },
       {
         texto:
-          "Deletar o império e redistribuir as moedas no servidor. Ninguém deve começar o jogo no topo apenas por ser filho do dono.",
+          "Deletar o império e redistribuir as moedas no servidor. Ninguém deveria começar no topo apenas por ser filho do dono.",
+
         afirmacao:
-          "Você considera que o ambiente virtual deve ser 100% meritocrático, livre dos privilégios do mundo físico."
+          "Você considera que as oportunidades devem ser distribuídas de forma mais igualitária, evitando privilégios herdados."
       }
     ]
   },
 
   {
     enunciado:
-      "Uma inteligência artificial de RH elimina candidatos que usam gírias ou sotaques periféricos em entrevistas de voz, contratando apenas quem fala o "português erudito" das classes altas. A IA deve ser mantida?",
+      'Uma inteligência artificial de RH elimina candidatos que usam gírias ou sotaques periféricos em entrevistas de voz, contratando apenas quem fala o "português erudito" das classes altas. A IA deve ser mantida?',
 
     alternativas: [
       {
         texto:
-          "Sim, deve ser mantida. Falar de forma polida é uma competência técnica que depende do esforço e dedicação de cada um.",
+          "Sim, desde que a comunicação exigida seja realmente relevante para a função e a avaliação seja justa.",
+
         afirmacao:
-          "Você considera que o mercado exige padrões de excelência e premia quem se adequou a eles."
+          "Você considera que padrões profissionais podem ser importantes, mas devem ter relação com as competências necessárias ao trabalho."
       },
       {
         texto:
-          "Não, deve ser proibida. A forma como alguém fala depende de onde cresceu, e não de seu talento profissional.",
+          "Não, o sistema deve ser corrigido. A maneira de falar não determina, por si só, o talento profissional.",
+
         afirmacao:
-          " Você confia que cobrar erudição mascara o privilégio social como se fosse competência, sabotando o mérito real"
+          "Você considera que sotaques e variedades linguísticas não devem ser confundidos com falta de competência."
       }
     ]
   }
@@ -117,16 +126,19 @@ const perguntas = [
 let atual = 0;
 let escolhas = [];
 
-function atualizarProgresso() {
+function atualizarProgresso(percentual) {
   const total = perguntas.length;
   const numeroAtual = Math.min(atual + 1, total);
-  const percentual = Math.round((atual / total) * 100);
 
   numeroPergunta.textContent =
-    `Pergunta ${numeroAtual} de ${total}`;
+    atual >= total
+      ? "Jornada concluída"
+      : `Pergunta ${numeroAtual} de ${total}`;
 
   porcentagem.textContent = `${percentual}%`;
   barraProgresso.style.width = `${percentual}%`;
+
+  barraProgressoContainer.setAttribute("aria-valuenow", percentual);
 }
 
 function mostraPergunta() {
@@ -140,19 +152,23 @@ function mostraPergunta() {
   caixaResultado.hidden = true;
   caixaFeedback.hidden = true;
   caixaAlternativas.hidden = false;
+  progresso.hidden = false;
 
   caixaPerguntas.textContent = perguntaAtual.enunciado;
   caixaAlternativas.replaceChildren();
+
+  atualizarProgresso(
+    Math.round(((atual + 1) / perguntas.length) * 100)
+  );
 
   botaoProxima.textContent =
     atual === perguntas.length - 1
       ? "Ver resultado →"
       : "Próxima pergunta →";
 
-  atualizarProgresso();
-
   perguntaAtual.alternativas.forEach((alternativa, indice) => {
     const botao = document.createElement("button");
+    botao.type = "button";
 
     const letra = document.createElement("span");
     letra.className = "letra-alternativa";
@@ -172,37 +188,53 @@ function mostraPergunta() {
 }
 
 function selecionarAlternativa(alternativa) {
+  if (caixaFeedback.hidden === false) {
+    return;
+  }
+
   escolhas[atual] = alternativa;
 
   caixaAlternativas.hidden = true;
   caixaFeedback.hidden = false;
 
   textoFeedback.textContent = alternativa.afirmacao;
+  botaoProxima.focus();
 }
 
 function proximaPergunta() {
+  if (caixaFeedback.hidden) {
+    return;
+  }
+
   atual++;
   mostraPergunta();
+
+  if (atual < perguntas.length) {
+    caixaPerguntas.focus();
+  }
 }
 
 function mostraResultado() {
   caixaPerguntas.textContent = "";
   caixaAlternativas.hidden = true;
   caixaFeedback.hidden = true;
-  progresso.hidden = true;
+  progresso.hidden = false;
 
   caixaResultado.hidden = false;
   resumoEscolhas.replaceChildren();
 
+  atualizarProgresso(100);
+
   textoResultado.textContent =
-    "Ao longo desta jornada, você refletiu sobre os riscos, as oportunidades e a responsabilidade no uso da Inteligência Artificial. O futuro não depende apenas da tecnologia, mas também das decisões das pessoas que a desenvolvem e utilizam.";
+    "Ao longo desta jornada, você refletiu sobre os riscos, as oportunidades e a responsabilidade no uso da inteligência artificial. O futuro não depende apenas da tecnologia, mas também das decisões das pessoas que a desenvolvem e utilizam. Suas escolhas ajudam a revelar diferentes perspectivas sobre mérito, igualdade e justiça social.";
 
   escolhas.forEach((escolha, indice) => {
     const item = document.createElement("article");
     item.className = "item-resumo";
 
     const titulo = document.createElement("strong");
-    titulo.textContent = `Pergunta ${indice + 1}: ${escolha.texto}`;
+    titulo.textContent =
+      `Pergunta ${indice + 1}: ${escolha.texto}`;
 
     const mensagem = document.createElement("p");
     mensagem.textContent = escolha.afirmacao;
@@ -211,17 +243,27 @@ function mostraResultado() {
     resumoEscolhas.appendChild(item);
   });
 
-  barraProgresso.style.width = "100%";
-  porcentagem.textContent = "100%";
-  numeroPergunta.textContent = "Jornada concluída";
+  botaoReiniciar.focus();
 }
 
 function reiniciarJogo() {
   atual = 0;
   escolhas = [];
 
+  caixaPerguntas.textContent = "";
+  textoFeedback.textContent = "";
+  textoResultado.textContent = "";
+
+  caixaAlternativas.replaceChildren();
+  resumoEscolhas.replaceChildren();
+
+  caixaResultado.hidden = true;
+  caixaFeedback.hidden = true;
+  caixaAlternativas.hidden = false;
   progresso.hidden = false;
+
   mostraPergunta();
+  caixaPerguntas.focus();
 }
 
 botaoProxima.addEventListener("click", proximaPergunta);
